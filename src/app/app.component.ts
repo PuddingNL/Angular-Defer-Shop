@@ -13,4 +13,30 @@ import { CardComponent } from './card/card.component';
 })
 export class AppComponent {
   title = 'The Defer Productpage';
+
+  // items: string[] = ['item1', 'item2', 'item3'];
+
+items: {
+  title: string,
+  description: string
+}[] = [
+  {
+    title: 'Item 1',
+    description: 'Description for item 1'
+  },
+  {
+    title: 'Item 2',
+    description: 'Description for item 2'
+  },
+  {
+    title: 'Item 3',
+    description: 'Description for item 3'
+  },
+  {
+    title: 'Item 4',
+    description: 'Description for item 4'
+  }
+];
+
+
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 
@@ -10,6 +10,9 @@ import {MatCardModule} from '@angular/material/card';
   imports: [MatCardModule, MatButtonModule],
 })
 export class CardComponent implements OnInit {
+    @Input() title = '';
+    @Input() description = '';
+    @Input() image = '';
 
   constructor() { }
 
