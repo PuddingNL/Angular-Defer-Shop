@@ -1,13 +1,2 @@
 <h1>{{ title }}</h1>
-<!-- <router-outlet></router-outlet> -->
-
-@defer (on viewport) {
-  <div class="card" *ngFor="let item of items">
-    <app-card 
-    [title]="item.title" 
-    [description]="item.description"
-    [image]="item.image"> </app-card>
-  </div>
-} @placeholder {
-  <span>Loading</span>
-}
+<router-outlet></router-outlet>
