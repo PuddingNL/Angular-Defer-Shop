@@ -1,9 +1,9 @@
-<p>De images worden geladen op het moment dat deze in viewport zijn.</p>
+<p>De images worden pas geladen bij een hover over de chips.</p>
 <section class="products">
     <div class="card" *ngFor="let item of items">
-      <app-card 
+      <app-card-hover 
       [title]="item.title" 
       [description]="item.description"
-      [image]="item.image"> </app-card>
+      [image]="item.image"> </app-card-hover>
     </div>
   </section>

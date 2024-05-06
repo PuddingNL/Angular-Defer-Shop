@@ -3,11 +3,11 @@
         <mat-card-title>{{title}}</mat-card-title>
         <mat-card-subtitle>{{description}}</mat-card-subtitle>
       </mat-card-header>
-      @defer (on viewport) {
+      @defer (on hover) {
         <img mat-card-image src="{{image}}" alt="Image of {{title}}">
       }
-      @placeholder (minimum 2s) {
-        <mat-spinner></mat-spinner>
+      @placeholder {
+        <mat-chip>Hover me</mat-chip>
       }
       <mat-card-actions class="action-buttons">
         <button mat-button>Reviews</button>

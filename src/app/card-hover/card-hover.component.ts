@@ -1,20 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatChipsModule} from '@angular/material/chips';
 
 @Component({
-  selector: 'app-card',
+  selector: 'app-card-hover',
   standalone: true,
-  templateUrl: './card.component.html',
-  styleUrl: './card.component.css',
-  imports: [MatCardModule, MatButtonModule, MatProgressSpinnerModule],
+  templateUrl: './card-hover.component.html',
+  styleUrl: './card-hover.component.css',
+  imports: [MatCardModule, MatButtonModule, MatChipsModule],
 })
-export class CardComponent implements OnInit {
+export class CardComponentHover implements OnInit {
     @Input() title = '';
     @Input() description = '';
     @Input() image = '';
-    @Input() interation = '';
 
   constructor() { }
 

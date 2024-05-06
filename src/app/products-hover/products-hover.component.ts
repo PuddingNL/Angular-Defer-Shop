@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardComponent } from '../card/card.component';
+import { CardComponentHover } from '../card-hover/card-hover.component';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css'],
+  selector: 'app-products-hover',
+  templateUrl: './products-hover.component.html',
+  styleUrls: ['./products-hover.component.css'],
   standalone: true,
-  imports: [CommonModule, CardComponent],
+  imports: [CommonModule, CardComponentHover],
 })
-export class ProductsComponent {
+export class ProductsComponentHover {
     items: {
         title: string,
         description: string,
