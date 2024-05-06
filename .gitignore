@@ -1,0 +1,14 @@
+/dist
+/tmp
+/node_modules
+/bower_components
+/coverage
+/npm-debug.log
+/yarn-error.log
+/yarn.lock
+/package-lock.json
+/yarn.lock
+/publ
+
+.angular
+node_modules/.package-lock.json
