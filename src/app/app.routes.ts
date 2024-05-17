@@ -1,7 +1,4 @@
 import { Routes } from '@angular/router';
-import { ProductsComponent } from './products/products.component';
-import { ProductsComponentHover } from './products-hover/products-hover.component';
-import { MiscComponent } from './misc/misc.component';
 
 export const routes: Routes = [
     {
