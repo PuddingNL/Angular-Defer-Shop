@@ -1,6 +1,6 @@
 <p>De images worden geladen op het moment dat deze in viewport zijn.</p>
 <section class="products">
-    <div class="card" *ngFor="let item of items">
+    <div class="card" *ngFor="let item of items; trackBy: trackByFn">
       <app-card 
       [title]="item.title" 
       [description]="item.description"

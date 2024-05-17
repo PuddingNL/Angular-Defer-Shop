@@ -1,16 +1,17 @@
-  <mat-card class="product-card">
-    <mat-card-header>
-        <mat-card-title>{{title}}</mat-card-title>
-        <mat-card-subtitle>{{description}}</mat-card-subtitle>
-      </mat-card-header>
-      @defer (on viewport) {
-        <img mat-card-image src="{{image}}" alt="Image of {{title}}">
-      }
-      @placeholder (minimum 2s) {
-        <mat-spinner></mat-spinner>
-      }
-      <mat-card-actions class="action-buttons">
-        <button mat-button>Reviews</button>
-        <button mat-button>Buy</button>
-      </mat-card-actions>
-</mat-card>
+  @defer (on viewport) {
+    <mat-card class="product-card">
+      <mat-card-header>
+          <mat-card-title>{{title}}</mat-card-title>
+          <mat-card-subtitle>{{description}}</mat-card-subtitle>
+        </mat-card-header>
+          <img mat-card-image src="{{image}}" alt="Image of {{title}}">
+        <mat-card-actions class="action-buttons">
+          <button mat-button>Reviews</button>
+          <button mat-button>Buy</button>
+        </mat-card-actions>
+  </mat-card>
+  }
+ 
+@placeholder (minimum 2s) {
+  <mat-spinner></mat-spinner>
+}

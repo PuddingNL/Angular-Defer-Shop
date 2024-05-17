@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CardComponent } from '../card/card.component';
 
+import { products } from '../../assets/products';
+import { items } from '../../interfaces/items';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -10,91 +13,15 @@ import { CardComponent } from '../card/card.component';
   imports: [CommonModule, CardComponent],
 })
 export class ProductsComponent {
-    items: {
-        title: string,
-        description: string,
-        image: string
-      }[] = [
-        {
-          title: 'Neo',
-          description: 'The One',
-          image: 'https://placekeanu.com/500/500/ga'
-        },
-        {
-          title: 'John Wick',
-          description: 'The Baba Yaga',
-          image: 'https://placekeanu.com/500/500/ya'
-        },
-        {
-          title: 'Ted Logan',
-          description: 'The Wyld Stallyns',
-          image: 'https://placekeanu.com/500/500/gb'
-        },
-        {
-          title: 'Johnny Utah',
-          description: 'The FBI Agent',
-          image: 'https://placekeanu.com/500/500/yb'
-        },
-        {
-          title: 'Speed',
-          description: 'The Bus Driver',
-          image: 'https://placekeanu.com/500/500/gc'
-        },
-        {
-          title: 'Constantine',
-          description: 'The Exorcist',
-          image: 'https://placekeanu.com/500/500/yc'
-        },
-        {
-          title: 'Klaatu',
-          description: 'The Alien',
-          image: 'https://placekeanu.com/500/500/gd'
-        },
-        {
-          title: 'Shane Falco',
-          description: 'The Quarterback',
-          image: 'https://placekeanu.com/500/500/yd'
-        },
-        {
-          title: 'Neo',
-          description: 'The One',
-          image: 'https://placekeanu.com/500/500/ge'
-        },
-        {
-          title: 'John Wick',
-          description: 'The Baba Yaga',
-          image: 'https://placekeanu.com/500/500/ye'
-        },
-        {
-          title: 'Ted Logan',
-          description: 'The Wyld Stallyns',
-          image: 'https://placekeanu.com/500/500/gf'
-        },
-        {
-          title: 'Johnny Utah',
-          description: 'The FBI Agent',
-          image: 'https://placekeanu.com/500/500/yf'
-        },
-        {
-          title: 'Speed',
-          description: 'The Bus Driver',
-          image: 'https://placekeanu.com/500/500/gh'
-        },
-        {
-          title: 'Constantine',
-          description: 'The Exorcist',
-          image: 'https://placekeanu.com/500/500/yh'
-        },
-        {
-          title: 'Klaatu',
-          description: 'The Alien',
-          image: 'https://placekeanu.com/500/500/gi'
-        },
-        {
-          title: 'Shane Falco',
-          description: 'The Quarterback',
-          image: 'https://placekeanu.com/500/500/yi'        }
+    
+      items: items[] = [];
 
+      constructor() {
+        this.items = products;
+      }
 
-      ];
+      trackByFn(index: number, item: {title: string, description: string, image: string}): string {
+          return item.title;
+      }
+
 }
