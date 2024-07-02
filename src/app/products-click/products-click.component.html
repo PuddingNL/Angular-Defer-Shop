@@ -1,0 +1,14 @@
+<p>De images worden geladen op het moment dat er op de buttons geklikt wordt.</p>
+<section class="products">
+    <div class="button-group">
+        <button mat-raised-button color="primary" #loadCards (click)="loadMoreCards">Load the cards</button>
+    </div>
+    @defer (on interaction(loadCards)) {
+        <div class="card" *ngFor="let item of items | slice:0:slice let i=index; trackBy: trackByFn">
+            <app-card 
+            [title]="item.title" 
+            [description]="item.description"
+            [image]="item.image"> </app-card>
+          </div>
+    }
+  </section>

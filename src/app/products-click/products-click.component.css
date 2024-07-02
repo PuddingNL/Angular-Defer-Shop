@@ -1,0 +1,13 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px;
+    margin: 0 8px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.button-group {
+    width: 100%;
+}

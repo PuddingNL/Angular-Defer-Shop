@@ -16,10 +16,10 @@ export const routes: Routes = [
         ),
     },
     {
-        path: 'more', 
+        path: 'products-click', 
         loadComponent: () =>
-            import('./misc/misc.component').then(
-            (m) => m.MiscComponent
+            import('./products-click/products-click.component').then(
+            (h) => h.ProductsComponentClick
         ),
     }
 ];
